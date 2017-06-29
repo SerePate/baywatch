@@ -12,29 +12,38 @@ const app = {
       )
   },
 
+  toFavorite(flick,ev){
+    const listItem = ev.target.closest('.flick')
+    flick.fav = !flick.fav
+
+    if(flick.fav){
+      listItem.classList.add('fav')
+    }
+    else{
+      listItem.classList.remove('fav')
+    }
+  },
+
+
   renderListItem(flick) {
     const item = document.createElement('div')
-    item.textContent = flick.name
+    item.dataset.id=flick.id
+    
+    item
+      .querySelector('.flick-name')
+      .textContent = flick.name
 
-    const toFavorite = document.createElement('buttons')
-    // toFavorite.document.addEventListener('fav', this.highlight.bind(this))
+    item
+      .querySelector("button.fav")
+      .addEventListener(
+        'click',
+        this.toFavorite.bind(this,flick)
+      )
 
-    const toDelete = document.createElement('buttons')
-    // toDelete.document.addEventListener('delete', this.highlight.bind(this))
-
-    const goUp = document.createElement('buttons')
-    // goUp.document.addEventListener('up', this.highlight.bind(this))
-
-    const goDown = document.createElement('buttons')
-    // goDown.document.addEventListener('down', this.highlight.bind(this))
-
+    return item
 
 
   },
-
-  renderButtons(){
-    
-  }
 
   handleSubmit(ev) {
     ev.preventDefault()
@@ -55,11 +64,13 @@ const app = {
   },
   
   highlight(ev,flicks){ //when clicked, add a background color to the text
-    ev.preventDefault()
-    highlight 
+     ev.preventDefault()
+     
 
-  },
-}
+   },
+
+
+ }
 
 
 app.init({
