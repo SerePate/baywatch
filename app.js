@@ -4,11 +4,6 @@ const app = {
     this.max = 0
     this.list = document.querySelector(selectors.listSelector)
 
-    let list = document.querySelectorAll('div')
-    let flicks = Array.from(list)
-    flicks.map((div)=>{
-        div.textContent})
-
     document
       .querySelector(selectors.formSelector)
       .addEventListener(
@@ -18,10 +13,28 @@ const app = {
   },
 
   renderListItem(flick) {
-    const item = document.createElement('li')
+    const item = document.createElement('div')
     item.textContent = flick.name
-    return item
+
+    const toFavorite = document.createElement('buttons')
+    // toFavorite.document.addEventListener('fav', this.highlight.bind(this))
+
+    const toDelete = document.createElement('buttons')
+    // toDelete.document.addEventListener('delete', this.highlight.bind(this))
+
+    const goUp = document.createElement('buttons')
+    // goUp.document.addEventListener('up', this.highlight.bind(this))
+
+    const goDown = document.createElement('buttons')
+    // goDown.document.addEventListener('down', this.highlight.bind(this))
+
+
+
   },
+
+  renderButtons(){
+    
+  }
 
   handleSubmit(ev) {
     ev.preventDefault()
@@ -34,17 +47,18 @@ const app = {
     const listItem = this.renderListItem(flick)
     this.list.appendChild(listItem)
 
+    this.flicks.push(flick.name)
+  
     this.max ++
+    
+    
   },
+  
+  highlight(ev,flicks){ //when clicked, add a background color to the text
+    ev.preventDefault()
+    highlight 
 
-  favButton(){
-      const favorite = document.createElement('fav-flick-button')
-      favorite.document.addEventListener('')
-      
-      
-      
-
-  }
+  },
 }
 
 

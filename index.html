@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
     <link rel="stylesheet" href="app.css">
+    
   </head>
   <body>
     <div class="grid-x">
@@ -29,7 +30,6 @@
                 Add flick
               </button>
             </div>
-
           </div>
         </form>
       </div>
@@ -37,19 +37,33 @@
 
     <div class="grid-x">
       <div class="medium-8 medium-offset-2 cell">
-        <ul id="flick-list"></ul>
-        <div class="fav-flick-button">
+        <div id="flick-list">
+          <div class="buttons">  
             <button
                 class="fav button"
                 type="fav"
-            >
-            Favorite!
-            </button>
+            >!!</button>
+            <button
+                class="delete button"
+                type="delete"
+            >X</button>
+            <button
+                class="up button"
+                type="up"
+            >up</button>
+            <button
+                class="down button"
+                type="down"
+            >down</button>
+
             <style>
-                .fav-flick-button {
+                .buttons{
                   float:right;
+                  width: 50px
+                  display: inline;
                 }
             </style>
+          </div>
         </div>
       </div>
 
