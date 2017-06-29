@@ -36,6 +36,15 @@ const app = {
 
     this.max ++
   },
+
+  favButton(){
+      const favorite = document.createElement('fav-flick-button')
+      favorite.document.addEventListener('')
+      
+      
+      
+
+  }
 }
 
 
