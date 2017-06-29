@@ -4,10 +4,10 @@ const app = {
     this.max = 0
     this.list = document.querySelector(selectors.listSelector)
 
-    const flickInput = document.getElementById("flick-form")
-    function insert(){
-    flicks.push(flickInput.value)
-}
+    let list = document.querySelectorAll('div')
+    let flicks = Array.from(list)
+    flicks.map((div)=>{
+        div.textContent})
 
     document
       .querySelector(selectors.formSelector)
