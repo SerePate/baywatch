@@ -4,6 +4,11 @@ const app = {
     this.max = 0
     this.list = document.querySelector(selectors.listSelector)
 
+    const flickInput = document.getElementById("flick-form")
+    function insert(){
+    flicks.push(flickInput.value)
+}
+
     document
       .querySelector(selectors.formSelector)
       .addEventListener(
@@ -32,6 +37,7 @@ const app = {
     this.max ++
   },
 }
+
 
 app.init({
   formSelector: 'form#flick-form',
