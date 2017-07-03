@@ -24,6 +24,32 @@ const app = {
     }
   },
 
+  upFlick(flick, ev){
+  //insertBefore
+    const listItem = ev.target.closest('.flick')
+
+    const parentDiv = listItem.parentNode
+    const preItem = listItem.previousSibling
+    const moveItem= listItem;
+
+    parentDiv.insertBefore(preItem, listItem)
+    listItem.remove()
+    parentDiv.insertBefore(moveItem, preItem)
+  },
+
+  downFlick(flick,ev){
+    const listItem = ev.target.closest('.flick')
+    
+    const parentDiv = listItem.parentNode
+    const preItem = listItem.previousSibling
+    const moveItem= preItem;
+
+    parentDiv.insertBefore(listItem,preItem)
+    preItem.remove()
+    parentDiv.insertBefore(moveItem, listItem)
+
+  },
+
   removeFlick(flick, ev) {
     // remove from the DOM
     const listItem = ev.target.closest('.flick')
@@ -55,6 +81,20 @@ const app = {
         'click', 
         this.favFlick.bind(this, flick)
       )
+
+      item
+        .querySelector('button.up')
+        .addEventListener(
+          'click',
+          this.upFlick.bind(this,flick)
+        )
+
+      item
+        .querySelector('button.down')
+        .addEventListener(
+          'click',
+          this.downFlick.bind(this,flick)
+        )
     
     return item
   },

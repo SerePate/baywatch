@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Quicksand');
 
 html {
-  background: url(splode.jpg) no-repeat center center fixed; 
+  background: url(background.jpg) no-repeat center center fixed; 
   background-size: cover;
 }
 body {
@@ -11,18 +11,10 @@ body {
 h1 {
   float: right;
   margin-top: 0.75rem;
-  font-family: 'Bungee', cursive;
-  text-shadow: 0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 30px #fff,
-               0 0 40px #62e6ff,
-               0 0 70px #62e6ff,
-               0 0 80px #62e6ff,
-               0 0 100px #209ab2,
-               0 0 150px #209ab2;
+  font-family: 'Bungee Shade',regular;
 }
 h1 small {
-  color: whitesmoke;
+  font-family: 'Quicksand', regular;
   font-size: 60%;
   text-shadow: none;
 }
