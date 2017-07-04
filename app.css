@@ -48,3 +48,7 @@ h1 small {
 .flick .actions.button-group {
   margin-bottom: 0;
 }
+.success-button{
+  background-color: gray;
+  color: black;
+}

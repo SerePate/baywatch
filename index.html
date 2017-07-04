@@ -6,6 +6,7 @@
     <title>Michael Baywatch</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.0/css/foundation.min.css">
     <link rel="stylesheet" href="app.css">
   </head>
@@ -41,12 +42,27 @@
       <div class="medium-8 medium-offset-2 cell list-container">
         <ul id="flick-list" class="no-bullet">
           <li class="flick grid-x align-middle template">
-            <span class="flick-name cell auto"  contenteditable="true">sdfkjhgds</span>
+            <span class="flick-name cell auto">sdfkjhgds</span>
             <span class="actions button-group cell shrink">
-              <button class="fav button warning">!!!</button>
-              <button class="remove button alert">X</button>
-              <button class="up button">:)</button>
-              <button class="down button">:(</button>
+              <button class="fav button warning">
+                <i class="fa fa-heart-o"></i>
+              </button>
+
+              <button class="move-up">
+                <i class="fa fa-hand-o-up fa-2x" aria-hidden="true"></i>
+              </button>
+
+              <button class="move-down">
+                <i class="fa fa-hand-o-down fa-2x" aria-hidden="true"></i>
+              </button>
+
+              <button class="remove button alert">
+                <i class="fa fa-trash-o"></i>
+              </button>
+
+              <button class="edit button">
+                <i class="fa fa-pencil"></i>
+              </button>
             </span>
           </li>
         </ul>
